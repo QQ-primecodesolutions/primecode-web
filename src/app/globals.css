@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #06b6d4;
+  --color-accent: #8b5cf6;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #0f172a;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+}
+
+/* next/font generates --font-inter/--font-jetbrains-mono at runtime via the
+   className on <html> in layout.tsx, so these must stay "inline" refs rather
+   than copied values. */
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+}
