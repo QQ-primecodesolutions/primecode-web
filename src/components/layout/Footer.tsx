@@ -11,14 +11,14 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-gradient-to-br from-bg-dark to-[#1e293b] pt-16 pb-8 text-white before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-br before:from-primary before:to-secondary">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 sm:px-8 md:grid-cols-[2fr_1fr_1fr]">
         <div>
-          <Link href="/">
-            <Image
-              src="/images/logo.svg"
-              alt="PrimeCode Solutions Logo"
-              width={51}
-              height={50}
-              className="mb-6 h-[50px] w-auto rounded-lg bg-white/95 p-2"
-            />
+          <Link href="/" aria-label="PrimeCode Solutions home" className="mb-6 inline-flex items-center gap-3">
+            <span className="rounded-lg bg-white p-1">
+              <Image src="/images/logo-mark.png" alt="" width={512} height={512} className="h-11 w-11" />
+            </span>
+            <span className="flex flex-col leading-none text-white">
+              <span className="text-xl font-bold tracking-tight">PrimeCode</span>
+              <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.42em] text-white/70">SOLUTIONS</span>
+            </span>
           </Link>
           <p className="leading-relaxed text-white/80">
             At PrimeCode Solutions, we combine technical expertise with a commitment to innovation, ensuring that

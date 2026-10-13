@@ -41,25 +41,25 @@ export function OurStorySection() {
               dedicated to leveraging their collective expertise for the benefit of the community.
             </p>
           </div>
-          <div className="relative overflow-hidden rounded-[20px] shadow-xl">
+          <div className="relative h-[400px] overflow-hidden rounded-[20px] shadow-xl">
             <Image
               src="/images/about.jpg"
               alt="About PrimeCode Solutions"
-              width={600}
-              height={400}
-              className="h-[400px] w-full object-cover"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
             />
           </div>
         </div>
 
         <div className="mt-16 grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-          <div className="relative overflow-hidden rounded-[20px] shadow-xl md:order-1">
+          <div className="relative h-[400px] overflow-hidden rounded-[20px] shadow-xl md:order-1">
             <Image
               src="/images/gap.jpeg"
               alt="Bridging Technology Gap"
-              width={600}
-              height={400}
-              className="h-[400px] w-full object-cover"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
             />
           </div>
           <div className="md:order-2">
