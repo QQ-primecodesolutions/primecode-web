@@ -22,15 +22,19 @@ export function Header() {
   return (
     <>
       <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-black/10 bg-white/95 px-[5%] py-4 shadow-[0_2px_5px_rgba(0,0,0,0.1)] backdrop-blur-sm">
-        <Link href="/" className="shrink-0">
+        <Link href="/" aria-label="PrimeCode Solutions home" className="group flex shrink-0 items-center gap-3">
           <Image
-            src="/images/logo.png"
-            alt="PrimeCode Solutions Logo"
-            width={160}
-            height={50}
-            className="h-[50px] w-auto rounded-lg border border-black/10 bg-white/95 p-2 backdrop-blur-md transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+            src="/images/logo-mark.png"
+            alt=""
+            width={512}
+            height={512}
+            className="h-12 w-12 transition-transform group-hover:-translate-y-0.5"
             priority
           />
+          <span className="flex flex-col leading-none text-logo-navy">
+            <span className="text-xl font-bold tracking-tight">PrimeCode</span>
+            <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.42em]">SOLUTIONS</span>
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-6 md:flex">

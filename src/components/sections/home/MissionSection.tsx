@@ -16,13 +16,13 @@ export function MissionSection() {
             change. Through our unwavering commitment to excellence, innovation, and community engagement, we
             strive to bridge the gap between technological potential and tangible achievements.
           </p>
-          <div className="relative overflow-hidden rounded-[20px] shadow-xl transition-transform duration-300 [transform:perspective(1000px)_rotateY(-5deg)] hover:[transform:perspective(1000px)_rotateY(0deg)_scale(1.02)] md:block">
+          <div className="relative h-[400px] overflow-hidden rounded-[20px] shadow-xl transition-transform duration-300 [transform:perspective(1000px)_rotateY(-5deg)] hover:[transform:perspective(1000px)_rotateY(0deg)_scale(1.02)] md:block">
             <Image
               src="/images/mission.jpg"
               alt="Our Mission"
-              width={600}
-              height={400}
-              className="h-[400px] w-full object-cover"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
             />
           </div>
         </div>
