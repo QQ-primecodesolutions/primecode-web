@@ -13,9 +13,9 @@ export function Footer() {
         <div>
           <Link href="/">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="PrimeCode Solutions Logo"
-              width={160}
+              width={51}
               height={50}
               className="mb-6 h-[50px] w-auto rounded-lg bg-white/95 p-2"
             />

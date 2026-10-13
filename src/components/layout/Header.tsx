@@ -24,9 +24,9 @@ export function Header() {
       <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-black/10 bg-white/95 px-[5%] py-4 shadow-[0_2px_5px_rgba(0,0,0,0.1)] backdrop-blur-sm">
         <Link href="/" className="shrink-0">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="PrimeCode Solutions Logo"
-            width={160}
+            width={51}
             height={50}
             className="h-[50px] w-auto rounded-lg border border-black/10 bg-white/95 p-2 backdrop-blur-md transition-transform hover:-translate-y-0.5 hover:shadow-lg"
             priority

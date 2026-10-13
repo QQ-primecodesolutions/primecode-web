@@ -1,20 +1,16 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 
-// The source logo (1024x928) is a full lockup: an icon mark on top of a
-// "PrimeCode Solutions" wordmark. Favicons need a square, mark-only crop —
-// zoom into the top ~620x620 region (centered on the mark) via scale + offset
-// since Satori/ImageResponse has no native crop, only flex/position CSS.
-const SOURCE_WIDTH = 1024;
-const SOURCE_HEIGHT = 928;
-const CROP_SIZE = 620;
-const CROP_X = (SOURCE_WIDTH - CROP_SIZE) / 2;
-const CROP_Y = 0;
+// Favicons use the compact logo symbol (public/images/symbol.svg): the Mont-aux-Sources skyline
+// with the prime stroke, drawn taller than in the full logo so it fills a square and still reads
+// at 32px. It comes from the PrimeCode Studio repo (assets/brand, built by build_logo.py).
+const PADDING = 0.1;
 
 export function AppIconGraphic({ size }: { size: number }) {
-  const logoData = readFileSync(join(process.cwd(), "public/images/logo.png"));
-  const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
-  const scale = size / CROP_SIZE;
+  const svg = readFileSync(join(process.cwd(), "public/images/symbol.svg"));
+  const src = `data:image/svg+xml;base64,${svg.toString("base64")}`;
+  const pad = Math.round(size * PADDING);
+  const inner = size - 2 * pad;
 
   return (
     <div
@@ -22,23 +18,12 @@ export function AppIconGraphic({ size }: { size: number }) {
         width: size,
         height: size,
         display: "flex",
-        overflow: "hidden",
-        position: "relative",
+        padding: pad,
         background: "#ffffff",
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element -- rendered by next/og's Satori engine, not the DOM; next/image and alt text don't apply here */}
-      <img
-        src={logoSrc}
-        alt=""
-        width={SOURCE_WIDTH * scale}
-        height={SOURCE_HEIGHT * scale}
-        style={{
-          position: "absolute",
-          left: -CROP_X * scale,
-          top: -CROP_Y * scale,
-        }}
-      />
+      <img src={src} alt="" width={inner} height={inner} />
     </div>
   );
 }
