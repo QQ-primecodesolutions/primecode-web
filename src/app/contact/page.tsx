@@ -10,7 +10,7 @@ import { FaqSection } from "@/components/sections/contact/FaqSection";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with PrimeCode Solutions for professional software engineering services. Contact us for frontend, backend, and mobile development projects.",
+    "Get in touch with PrimeCode Solutions for professional software engineering services. We work with clients in QwaQwa, Phuthaditjhaba and beyond, on-site or remotely.",
   keywords: ["contact PrimeCode Solutions", "software development contact", "get in touch", "project inquiry"],
   openGraph: {
     title: "Contact Us - PrimeCode Solutions",

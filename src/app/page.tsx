@@ -7,7 +7,7 @@ import { KeyServicesSection } from "@/components/sections/home/KeyServicesSectio
 export const metadata: Metadata = {
   title: "Transforming Ideas into Seamless Digital Experiences",
   description:
-    "PrimeCode Solutions is a software engineering company delivering frontend development, backend development, and mobile app development end to end.",
+    "PrimeCode Solutions is a software engineering company in Phuthaditjhaba, QwaQwa, delivering frontend development, backend development, and mobile app development end to end.",
   openGraph: {
     title: "PrimeCode Solutions - Transforming Ideas into Seamless Digital Experiences",
     description:

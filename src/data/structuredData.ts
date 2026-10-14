@@ -12,11 +12,26 @@ export const organizationJsonLd = {
   logo: `${siteConfig.url}/images/logo.png`,
   image: `${siteConfig.url}/images/logo.png`,
   email: "primecode-solutions@outlook.com",
+  telephone: siteConfig.phoneE164,
+  areaServed: [
+    { "@type": "City", name: "Phuthaditjhaba" },
+    { "@type": "Place", name: "QwaQwa" },
+    { "@type": "State", name: "Free State" },
+    { "@type": "Country", name: "South Africa" },
+  ],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "17:00",
+  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Phuthaditjhaba",
     addressRegion: "Free State",
     addressCountry: "ZA",
   },
-  sameAs: socialLinks.filter((link) => link.href !== "#").map((link) => link.href),
+  sameAs: socialLinks
+    .filter((link) => link.href !== "#" && link.href !== siteConfig.whatsappUrl)
+    .map((link) => link.href),
 };

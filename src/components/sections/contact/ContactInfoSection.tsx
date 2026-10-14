@@ -1,7 +1,13 @@
-import { Users } from "lucide-react";
+import { Users, type LucideIcon } from "lucide-react";
 import { contactInfo, socialLinks } from "@/data/contactInfo";
+import type { ContactLine } from "@/lib/types";
 
-const items = [contactInfo.location, contactInfo.email, contactInfo.responseTime];
+const items: { icon: LucideIcon; title: string; lines: ContactLine[] }[] = [
+  contactInfo.location,
+  contactInfo.email,
+  contactInfo.phone,
+  contactInfo.responseTime,
+];
 
 export function ContactInfoSection() {
   return (
@@ -16,11 +22,23 @@ export function ContactInfoSection() {
           </div>
           <div>
             <h3 className="mb-2 text-lg font-semibold text-text-primary">{item.title}</h3>
-            {item.lines.map((line) => (
-              <p key={line} className="text-text-secondary">
-                {line}
-              </p>
-            ))}
+            {item.lines.map((line) =>
+              typeof line === "string" ? (
+                <p key={line} className="text-text-secondary">
+                  {line}
+                </p>
+              ) : (
+                <p key={line.href} className="text-text-secondary">
+                  <a
+                    href={line.href}
+                    {...(line.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                    className="transition-colors hover:text-primary"
+                  >
+                    {line.text}
+                  </a>
+                </p>
+              ),
+            )}
           </div>
         </div>
       ))}

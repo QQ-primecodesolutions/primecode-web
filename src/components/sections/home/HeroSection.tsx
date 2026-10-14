@@ -31,7 +31,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
           className="mx-auto mb-10 max-w-[600px] text-[clamp(1.1rem,2vw,1.25rem)] leading-relaxed text-white/90"
         >
-          At PrimeCode Solutions, we are a dynamic team of experts specializing in cutting-edge software
+          At PrimeCode Solutions, based in Phuthaditjhaba, QwaQwa, we are a dynamic team of experts specializing in cutting-edge software
           engineering: web development, and mobile app creation. With a passion for innovation and a commitment to
           precision, we turn your concepts into flawless digital solutions.
         </motion.p>

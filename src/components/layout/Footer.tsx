@@ -44,7 +44,13 @@ export function Footer() {
 
         <div>
           <h3 className="mb-4 text-xl font-semibold text-white">Get In Touch</h3>
-          <p className="mb-6 text-white/80">Email: {contactInfo.email.lines[0]}</p>
+          <p className="mb-2 text-white/80">Email: {contactInfo.email.lines[0]}</p>
+          <p className="mb-6 text-white/80">
+            Call or WhatsApp:{" "}
+            <a href={contactInfo.phone.lines[0].href} className="transition-colors hover:text-secondary">
+              {contactInfo.phone.lines[0].text}
+            </a>
+          </p>
           <h3 className="mb-4 text-xl font-semibold text-white">Follow Us</h3>
           <div className="flex gap-4">
             {socialLinks.map((social) => (

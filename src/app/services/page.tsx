@@ -7,13 +7,16 @@ import { CtaSection } from "@/components/sections/services/CtaSection";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Comprehensive software engineering services including frontend development, backend development, and mobile app development by PrimeCode Solutions.",
+    "Comprehensive software engineering services including frontend development, backend development, and mobile app development by PrimeCode Solutions in Phuthaditjhaba, QwaQwa.",
   keywords: [
     "frontend development",
     "backend development",
     "mobile development",
     "software engineering services",
     "web development",
+    "software company QwaQwa",
+    "web developer Phuthaditjhaba",
+    "app developer Free State",
   ],
   openGraph: {
     title: "Our Services - PrimeCode Solutions",

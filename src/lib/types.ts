@@ -25,6 +25,8 @@ export interface FaqItem {
   answer: string;
 }
 
+export type ContactLine = string | { text: string; href: string };
+
 export interface SocialLink {
   label: string;
   href: string;
