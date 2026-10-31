@@ -11,7 +11,10 @@ export function HeroSection() {
         src="/images/space-digital.webp"
         alt=""
         fill
-        priority
+        preload
+        fetchPriority="high"
+        // Sits under a 90% opaque gradient, so lower quality is invisible.
+        quality={60}
         sizes="100vw"
         className="object-cover"
       />

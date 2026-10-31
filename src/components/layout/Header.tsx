@@ -30,7 +30,7 @@ export function Header() {
             height={512}
             sizes="48px"
             className="h-12 w-12 transition-transform group-hover:-translate-y-0.5"
-            priority
+            preload
           />
           <span className="flex flex-col leading-none text-logo-navy">
             <span className="text-xl font-bold tracking-tight">PrimeCode</span>
