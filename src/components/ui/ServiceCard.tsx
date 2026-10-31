@@ -36,7 +36,8 @@ export function ServiceCard({ icon: Icon, title, description, image, cta }: Serv
           href={cta.href}
           className="mt-6 inline-flex items-center gap-2 font-semibold text-primary transition-all duration-300 hover:translate-x-1 hover:text-primary-dark"
         >
-          {cta.label} <ArrowRight size={16} />
+          {cta.label}
+          <span className="sr-only"> about {title}</span> <ArrowRight size={16} />
         </Link>
       )}
     </div>

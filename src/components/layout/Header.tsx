@@ -28,6 +28,7 @@ export function Header() {
             alt=""
             width={512}
             height={512}
+            sizes="48px"
             className="h-12 w-12 transition-transform group-hover:-translate-y-0.5"
             priority
           />

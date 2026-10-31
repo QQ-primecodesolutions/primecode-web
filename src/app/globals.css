@@ -20,6 +20,7 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-rise: rise 0.8s ease-out both;
 }
 
 /* next/font generates --font-inter/--font-jetbrains-mono at runtime via the
@@ -28,6 +29,16 @@
 @theme inline {
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
+}
+
+/* Movement only, no opacity change, for above-the-fold text that counts toward LCP. */
+@keyframes rise {
+  from {
+    transform: translateY(24px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-up {
