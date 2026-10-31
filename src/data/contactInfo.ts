@@ -12,7 +12,7 @@ export const contactInfo = {
   email: {
     icon: Mail,
     title: "Email Address",
-    lines: ["primecode-solutions@outlook.com"],
+    lines: [siteConfig.email],
   },
   phone: {
     icon: Phone,

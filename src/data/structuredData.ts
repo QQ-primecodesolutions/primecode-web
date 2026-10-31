@@ -11,7 +11,7 @@ export const organizationJsonLd = {
   url: siteConfig.url,
   logo: `${siteConfig.url}/images/logo.png`,
   image: `${siteConfig.url}/images/logo.png`,
-  email: "primecode-solutions@outlook.com",
+  email: siteConfig.email,
   telephone: siteConfig.phoneE164,
   areaServed: [
     { "@type": "City", name: "Phuthaditjhaba" },
